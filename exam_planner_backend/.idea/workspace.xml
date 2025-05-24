@@ -35,7 +35,7 @@
         <entry key="$PROJECT_DIR$" value="main" />
       </map>
     </option>
-    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
   </component>
   <component name="GitHubPullRequestSearchHistory">{
   &quot;lastFilter&quot;: {
@@ -43,12 +43,12 @@
     &quot;assignee&quot;: &quot;ancutacirlan&quot;
   }
 }</component>
-  <component name="GithubPullRequestsUISettings">{
-  &quot;selectedUrlAndAccountId&quot;: {
-    &quot;url&quot;: &quot;https://github.com/ancutacirlan/TWWAOSProject&quot;,
-    &quot;accountId&quot;: &quot;01fa4835-3630-4d32-a759-0c4509b1d2f6&quot;
+  <component name="GithubPullRequestsUISettings"><![CDATA[{
+  "selectedUrlAndAccountId": {
+    "url": "https://github.com/ancutacirlan/exam-planner.git",
+    "accountId": "01fa4835-3630-4d32-a759-0c4509b1d2f6"
   }
-}</component>
+}]]></component>
   <component name="HighlightingSettingsPerFile">
     <setting file="file://$PROJECT_DIR$/app/email.py" root0="FORCE_HIGHLIGHTING" />
   </component>
@@ -61,29 +61,29 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "Docker.Dockerfile.executor": "Run",
-    "Docker.docker-compose.yml.db: Compose Deployment.executor": "Run",
-    "Docker.docker-compose.yml: Compose Deployment.executor": "Run",
-    "Flask server.exam_panner.executor": "Run",
-    "Python.clasask.executor": "Debug",
-    "Python.laborator3.executor": "Run",
-    "Python.main.executor": "Run",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "RunOnceActivity.git.unshallow": "true",
-    "git-widget-placeholder": "main",
-    "last_opened_file_path": "C:/Users/cirla/Desktop/an I/sem 2/TWAAOS/exam_planner_backend",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "run.code.analysis.last.selected.profile": "pProject Default",
-    "settings.editor.selected.configurable": "preferences.lookFeel",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Docker.Dockerfile.executor&quot;: &quot;Run&quot;,
+    &quot;Docker.docker-compose.yml.db: Compose Deployment.executor&quot;: &quot;Run&quot;,
+    &quot;Docker.docker-compose.yml: Compose Deployment.executor&quot;: &quot;Run&quot;,
+    &quot;Flask server.exam_panner.executor&quot;: &quot;Run&quot;,
+    &quot;Python.clasask.executor&quot;: &quot;Debug&quot;,
+    &quot;Python.laborator3.executor&quot;: &quot;Run&quot;,
+    &quot;Python.main.executor&quot;: &quot;Run&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/cirla/Desktop/an I/sem 2/TWAAOS/exam_planner_backend&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;run.code.analysis.last.selected.profile&quot;: &quot;pProject Default&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.lookFeel&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\cirla\Desktop\exam_panner\uploads" />
@@ -246,6 +246,7 @@
       <workItem from="1748074388052" duration="4000" />
       <workItem from="1748074963488" duration="501000" />
       <workItem from="1748078357755" duration="4870000" />
+      <workItem from="1748091128736" duration="139000" />
     </task>
     <servers />
   </component>
