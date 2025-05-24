@@ -1,0 +1,15 @@
+1. Șterge folderul migrations/ (după ce salvezi fișierele importante)
+
+2. alembic init migrations
+
+
+3.Editează din nou migrations/env.py și adaugă:
+
+from app.models import Base
+target_metadata = Base.metadata
+
+📌 Pas 4: Generare și aplicare migrații
+Creare migrație nouă
+alembic revision --autogenerate -m "Initial migration"
+Aplică migrația
+alembic upgrade head

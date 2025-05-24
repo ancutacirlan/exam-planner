@@ -1,0 +1,23 @@
+site_name: Exam Planner Docs
+theme:
+  name: material
+
+plugins:
+  - search
+  - mkdocstrings:
+      default_handler: python
+      handlers:
+        python:
+          options:
+            show_source: false
+
+
+nav:
+  - Home: index.md
+  - Decorator: decorator.md
+  - Import: import_data.md
+
+markdown_extensions:
+  - admonition
+  - codehilite
+  - pymdownx.superfences

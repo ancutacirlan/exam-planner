@@ -1,0 +1,245 @@
+/* Containerul principal */
+.pending-exams-container {
+  max-width: 800px;
+  margin: 2rem auto;
+  padding: 2rem;
+  background-color: #f9f9f9;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  font-family: 'Arial', sans-serif;
+  color: #333;
+}
+
+/* Titlu */
+h2 {
+  font-size: 2rem;
+  text-align: center;
+  color: #0044cc;
+  margin-bottom: 2rem;
+}
+
+/* Containerul de decizie */
+.decision-container {
+  background-color: #f4f6f9;
+  border-radius: 8px;
+  padding: 20px;
+  margin-bottom: 30px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Etichete pentru inputuri */
+label {
+  font-weight: bold;
+  color: #555;
+  margin-bottom: 0.5rem;
+  display: block;
+}
+
+/* Flexbox pentru aranjarea câmpurilor de decizie în două coloane */
+.input-row {
+  display: flex;
+  justify-content: space-between; /* Asigură distanța între coloane */
+  gap: 40px; /* Distanță între elemente pe rând */
+  margin-bottom: 20px;
+}
+
+.input-row div {
+  flex: 1 1 48%; /* Fiecare câmp ocupă aproximativ 48% din lățimea containerului */
+  display: flex;
+  flex-direction: column;
+  margin-right: 20px;
+}
+
+
+/* Stilizarea inputurilor pentru formularul de decizie */
+.input-row input,
+.input-row select {
+  width: 100%;
+  padding: 12px;
+  border-radius: 6px;
+  border: 1px solid #ddd;
+  font-size: 1rem;
+  background-color: #f4f6f9;
+  transition: border-color 0.3s ease;
+}
+
+.input-row input:focus,
+.input-row select:focus {
+  border-color: #0044cc;
+  outline: none;
+}
+
+/* Textarea pentru detalii */
+.details-textarea {
+  width: 100%;
+  height: 120px;
+  padding: 12px;
+  border-radius: 6px;
+  border: 1px solid #ddd;
+  background-color: #f4f6f9;
+  font-size: 1rem;
+  margin-bottom: 20px;
+  transition: border-color 0.3s ease;
+}
+
+.details-textarea:focus {
+  border-color: #0044cc;
+  outline: none;
+}
+
+/* Butonul de trimitere */
+.button-container {
+  text-align: center;
+  margin-top: 20px;
+}
+
+#submit-button {
+  padding: 12px 24px;
+  background-color: #2196f3; /* Albastru pentru butonul normal */
+  color: white;
+  border: none;
+  border-radius: 6px;
+  font-size: 1rem;
+  font-weight: bold;
+  cursor: pointer;
+  display: block;        /* important pentru centrare */
+  margin: 0 auto;        /* margină orizontală automată */
+  transition: background-color 0.3s ease; /* Tranziție lină la hover */
+}
+
+/* Efectul hover pentru butonul de trimitere - albastru mai închis */
+#submit-button:hover {
+  background-color: #1976d2; /* Albastru mai închis la hover */
+}
+
+/* Culoare mai palidă când butonul este dezactivat */
+#submit-button:disabled {
+  background-color: #e0e0e0;
+  cursor: not-allowed;
+}
+
+/* Lista de examene */
+.exam-list {
+  margin-top: 20px;
+  border-top: 1px solid #ddd;
+  padding-top: 20px;
+}
+
+.exam-item {
+  cursor: pointer;
+  padding: 12px;
+  background-color: #f4f6f9;
+  border-radius: 8px;
+  margin-bottom: 10px;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.exam-item:hover {
+  background-color: #e0e0e0;
+  transform: scale(1.03);
+}
+
+.exam-item strong {
+  color: #0044cc;
+  font-size: 1.1rem;
+}
+
+.exam-item em {
+  font-style: italic;
+  color: #777;
+}
+
+/* Alinierea inputurilor și dropdown-urilor */
+.input-row select,
+.input-row input,
+.details-textarea {
+  color: #333; /* Text de culoare închisă pentru o vizibilitate mai bună */
+  background-color: #f4f6f9; /* Fundal deschis pentru inputuri */
+  border: 1px solid #ddd;
+  font-size: 1rem;
+  border-radius: 6px;
+  padding: 12px;
+  transition: border-color 0.3s ease;
+}
+
+.input-row select:focus,
+.input-row input:focus,
+.details-textarea:focus {
+  border-color: #0044cc; /* Culoare de focus albastră */
+  outline: none;
+}
+
+.input-row select option {
+  color: #333; /* Culoare text opțiuni dropdown */
+}
+.decision-container h3 {
+  font-size: 1.5rem; /* Mărimea fontului */
+  color: #0044cc; /* Culoare albastru pentru titlu */
+  font-weight: bold; /* Font îngroșat */
+  margin-bottom: 20px; /* Distanță mai mare sub titlu */
+}
+.highlight {
+  background-color: #FFD700; /* Culoare pentru zilele cu examene */
+}
+
+.selected-exam {
+  background-color: #FF6347; /* Culoare mai intensă pentru ziua examenului selectat */
+  font-weight: bold;
+}
+.success-message {
+  background-color: #28a745;
+  color: white;
+  padding: 10px;
+  margin-bottom: 20px;
+  border-radius: 5px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.success-message button {
+  background-color: transparent;
+  border: none;
+  color: white;
+  cursor: pointer;
+  font-size: 16px;
+}
+.small-label {
+  font-size: 0.8rem;
+  color: #555;
+  margin-bottom: 4px;
+  display: block;
+  font-weight: 600;
+  /* Poți adăuga și alte stiluri dacă vrei */
+}
+.react-calendar__tile.highlight {
+  background: #e0f7fa;
+  border-radius: 50%;
+}
+
+/* Pentru data selectată special */
+.react-calendar__tile.selected-exam {
+  background: #b2ebf2;
+  font-weight: bold;
+  border: 2px solid #00acc1;
+}.pending-exams-wrapper {
+  display: flex;
+  gap: 2rem;
+  align-items: flex-start;
+}
+
+.calendar-container-fixed {
+  flex: 0 0 300px;
+  position: sticky;
+  top: 20px;
+  height: fit-content;
+  background-color: #f5f5f5;
+  padding: 1rem;
+  border-radius: 10px;
+  box-shadow: 0 0 8px rgba(0, 0, 0, 0.1);
+}
+
+.pending-exams-content {
+  flex: 1;
+}
+

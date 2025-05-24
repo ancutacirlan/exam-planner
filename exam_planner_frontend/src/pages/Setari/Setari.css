@@ -1,0 +1,396 @@
+/* Container general */
+.settings-container {
+  padding: 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  color: #222;
+}
+
+.section-title {
+  font-size: 2rem;
+  margin-bottom: 15px;
+  text-align: center;
+}
+
+/* Container pentru cardurile perioadelor */
+.table-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px; /* spațiu între carduri */
+  justify-content: center;
+  margin-top: 20px;
+}
+
+/* Card perioadă */
+.period-card {
+  background-color: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08);
+  padding: 20px;
+  margin: 0;
+  width: 280px; /* lățime fixă pentru aliniere orizontală */
+  transition: transform 0.2s ease;
+}
+
+.period-card:hover {
+  transform: scale(1.02);
+}
+
+.period-card h4 {
+  margin-top: 0;
+  margin-bottom: 10px;
+  font-size: 1.3rem;
+  color: #0f62fe;
+}
+
+.period-date {
+  font-size: 1rem;
+  margin: 4px 0;
+  color: #444;
+}
+
+.period-actions {
+  margin-top: 10px;
+  display: flex;
+  justify-content: flex-end;
+  gap: 10px;
+}
+
+.edit-btn,
+.delete-btn {
+  cursor: pointer;
+  padding: 6px 10px;
+  border-radius: 6px;
+  border: none;
+  font-size: 0.9rem;
+  transition: background-color 0.3s ease;
+}
+
+.edit-btn {
+  background-color: #0f62fe;
+  color: white;
+}
+
+.edit-btn:hover {
+  background-color: #0353e9;
+}
+
+.delete-btn {
+  background-color: #d32f2f;
+  color: white;
+}
+
+.delete-btn:hover {
+  background-color: #b71c1c;
+}
+
+/* Confirmare ștergere */
+.confirm-delete-message {
+  margin-top: 20px;
+  background-color: #fff3f3;
+  border: 1px solid #d32f2f;
+  border-radius: 10px;
+  padding: 15px;
+  max-width: 400px;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+  color: #b71c1c;
+  font-weight: 600;
+}
+
+.confirm-delete-message p {
+  margin-bottom: 15px;
+}
+
+.button-container button {
+  margin: 0 10px;
+}
+
+/* Form container */
+.form-container {
+  margin-top: 40px;
+  background-color: #f9f9f9;
+  padding: 25px;
+  border-radius: 15px;
+  box-shadow: 0 0 15px rgb(15 98 254 / 0.15);
+  max-width: 650px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.form-title {
+  text-align: center;
+  margin-bottom: 25px;
+  font-size: 1.7rem;
+  color: #0f62fe;
+}
+
+/* Formular Flex */
+.form-flex-row {
+  display: flex;
+  gap: 30px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.form-column {
+  flex: 1 1 250px;
+  min-width: 250px;
+}
+
+.form-group {
+  margin-bottom: 20px;
+  display: flex;
+  flex-direction: column;
+  font-size: 1rem;
+  /* color:#bbb */
+}
+
+.form-group label {
+  margin-bottom: 6px;
+  font-weight: 600;
+  color: #333;
+}
+
+.form-group input[type="date"],
+.form-group select {
+  padding: 8px 10px;
+  font-size: 1rem;
+  border-radius: 6px;
+  border: 1.5px solid #ccc;
+  outline-offset: 2px;
+  transition: border-color 0.3s ease;
+  color:black;
+  background-color: #ccc;
+}
+
+.form-group input[type="date"]:focus,
+.form-group select:focus {
+  border-color: #0f62fe;
+  outline: none;
+}
+
+/* Select când e readonly */
+.input-readonly {
+  background-color: #eee;
+  color: #666;
+  cursor: not-allowed;
+}
+
+/* Butoane formular */
+.form-btn-container {
+  text-align: center;
+  margin-top: 10px;
+}
+
+.submit-btn,
+.cancel-btn,
+.reset-btn {
+  cursor: pointer;
+  padding: 10px 22px;
+  margin: 8px 10px;
+  border-radius: 8px;
+  border: none;
+  font-weight: 600;
+  font-size: 1rem;
+  transition: background-color 0.3s ease;
+}
+
+.submit-btn {
+  background-color: #0f62fe;
+  color: white;
+}
+
+.submit-btn:hover {
+  background-color: #0353e9;
+}
+
+.cancel-btn {
+  background-color: #ddd;
+  color: #444;
+}
+
+.cancel-btn:hover {
+  background-color: #bbb;
+}
+
+.reset-btn {
+  background-color: #f57c00;
+  color: white;
+  font-weight: 700;
+}
+
+.reset-btn:hover {
+  background-color: #d46b00;
+}
+
+/* Mesaje de eroare / info */
+.info-card.error {
+  margin-top: 15px;
+  background-color: #fddede;
+  border: 1px solid #d32f2f;
+  border-radius: 10px;
+  padding: 12px 18px;
+  color: #b71c1c;
+  font-weight: 600;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  justify-content: center;
+}
+
+/* Reset mesaj */
+.reset-message {
+  margin-top: 15px;
+  font-weight: 600;
+  color: #f57c00;
+  text-align: center;
+}
+
+/* Loading spinner (simplu) */
+.loading-spinner {
+  text-align: center;
+  font-size: 1.2rem;
+  color: #0f62fe;
+  font-weight: 600;
+  margin-top: 15px;
+}
+.input-clear-bg {
+  background-color: #fff !important;
+  color: #000 !important;
+  cursor: pointer;
+  border: 1.5px solid #ccc;
+  border-radius: 6px;
+  padding: 8px 10px;
+  font-size: 1rem;
+  outline-offset: 2px;
+  transition: border-color 0.3s ease;
+  appearance: none; /* Elimină săgeata default la unele browsere */
+}
+/* Focus */
+.input-clear-bg:focus {
+  border-color: #0f62fe;
+  outline: none;
+}
+.small-form-container {
+  background-color: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08);
+  padding: 15px;
+  width: 280px;
+  font-size: 0.9rem;
+  margin: 0 auto 20px auto;
+}
+
+.small-form-container label {
+  font-size: 0.85rem;
+  margin-bottom: 4px;
+}
+
+.small-form-container input,
+.small-form-container select {
+  font-size: 0.85rem;
+  padding: 6px 10px;
+  border-radius: 6px;
+  border: 1.5px solid #ccc;
+}
+
+.small-form-container button {
+  font-size: 0.85rem;
+  padding: 8px 16px;
+  border-radius: 6px;
+}
+.container-editare {
+  max-width: 400px; /* restrângem lățimea */
+  margin: 20px auto; /* centru și spațiu sus-jos */
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  background: #fff;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+  font-family: Arial, sans-serif;
+}
+
+.container-editare label {
+  display: block;
+  margin-bottom: 6px;
+  font-weight: bold;
+  font-size: 14px;
+}
+
+.container-editare input[type="text"],
+.container-editare input[type="date"] {
+  width: 100%;
+  padding: 8px 30px 8px 8px; /* spațiu pentru iconiță la dreapta */
+  font-size: 14px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  background-color: #fff; /* input date background deschis */
+  color: #000;
+  box-sizing: border-box;
+  position: relative;
+}
+
+/* Pentru iconita calendar - folosind fundal cu icon */
+.container-editare input[type="date"] {
+  background: url('data:image/svg+xml;utf8,<svg fill="gray" height="16" viewBox="0 0 24 24" width="16" xmlns="http://www.w3.org/2000/svg"><path d="M7 11h2v2H7zM11 11h2v2h-2zM15 11h2v2h-2zM7 15h2v2H7zM11 15h2v2h-2zM15 15h2v2h-2z"/><path d="M19 4h-1V2h-2v2H8V2H6v2H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zM5 20V9h14v11H5z"/></svg>') no-repeat right 8px center;
+  background-size: 16px 16px;
+  padding-right: 36px; /* mai mult spațiu pentru icon */
+}
+
+/* Butoane */
+.container-editare button {
+  margin-top: 15px;
+  padding: 10px 20px;
+  font-size: 14px;
+  border-radius: 4px;
+  border: none;
+  cursor: pointer;
+}
+
+.container-editare button.salvare {
+  background-color: #28a745;
+  color: white;
+  margin-right: 10px;
+}
+
+.container-editare button.anulare {
+  background-color: #dc3545;
+  color: white;
+}
+
+/* Micșorăm spațiul între etichete și input-uri */
+.container-editare div {
+  margin-bottom: 12px;
+}
+
+
+/* Responsive - mobil */
+@media (max-width: 640px) {
+  .table-container {
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  .period-card {
+    width: 100%;
+    max-width: 400px;
+    margin: 0 auto;
+  }
+
+  .form-flex-row {
+    flex-direction: column;
+  }
+
+  .form-column {
+    min-width: 100%;
+  }
+}
+@media (max-width: 640px) {
+  .input-clear-bg {
+    width: 100%;
+  }
+}

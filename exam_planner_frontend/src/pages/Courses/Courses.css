@@ -1,0 +1,189 @@
+html, body {
+  height: 100%;
+  margin: 0;
+  overflow-y: hidden; /* doar un scroll pe pagină */
+}
+
+#root {
+  height: 100%;
+  
+}
+
+.home-container {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  padding: 1rem 2rem;
+  background-color: #f4f6f9;
+  box-sizing: border-box;
+}
+
+.courses-header {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 1rem;
+  padding-bottom: 0.5rem;
+  position: sticky;
+  top: 0;
+  background-color: #f4f6f9;
+  z-index: 10;
+  height: 60px; /* fixează înălțimea pentru calculul scrollului */
+  flex-shrink: 0;
+}
+
+.courses-header h2 {
+  font-size: 20px;
+  margin: 0;
+  color: #0044cc;
+}
+
+.course-count {
+  font-size: 18px;
+  background-color: #e6f0ff;
+  padding: 8px 15px;
+  border-radius: 20px;
+  color: #333;
+  
+}
+
+/* Container scrollabil doar pentru tabel */
+.table-container {
+  flex: 1; 
+  overflow-y: auto;
+  width: 100%;
+}
+
+/* Tabel */
+.courses-table {
+  width: 100%;
+  border-collapse: collapse;
+  background-color: #fff;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+}
+
+.courses-table th, .courses-table td {
+  padding: 12px 16px;
+  border-bottom: 1px solid #ddd;
+}
+
+.courses-table th {
+  background-color: #0044cc;
+  color: white;
+  position: sticky;
+  top: 0; /* sticky față de containerul scrollabil */
+  z-index: 5;
+}
+
+.courses-table tr:hover {
+  background-color: #f1f1f1;
+}
+
+.clickable-row {
+  cursor: pointer;
+}
+.sort-button {
+  background-color: #0044cc;
+  color: white;
+  border: none;
+  padding: 8px 12px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+.sort-button:hover {
+  background-color: #003399;
+}
+.examination-btn.active {
+  background-color: #4CAF50; /* Culoare verde pentru butonul activ */
+  color: white;
+}
+
+.examination-btn {
+  margin: 5px;
+  padding: 5px 10px;
+  cursor: pointer;
+  border: none;
+  background-color: #f1f1f1;
+}
+
+.examination-btn:hover {
+  background-color: #ddd;
+}
+.saving-text {
+  font-style: italic;
+  color: #888;
+}
+.courses-table select {
+  padding: 6px 10px;
+  font-size: 14px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  background-color: #fff;
+  cursor: pointer;
+  color:black;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  transition: all 0.2s ease-in-out;
+}
+
+.courses-table select:hover {
+  border-color: #888;
+}
+
+.courses-table select:focus {
+  outline: none;
+  border-color: #0044cc;
+  box-shadow: 0 0 0 2px rgba(0, 68, 204, 0.2);
+}
+.filters-container {
+  display: flex;
+  gap: 1.5rem;
+  margin-bottom: 1.5rem;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+.filters-container > div {
+  display: flex;
+  flex-direction: column;
+  font-size: 14px;
+  color: #0044cc;
+  font-weight: 600;
+}
+
+.filters-container label {
+  margin-bottom: 0.3rem;
+}
+
+.filters-container select {
+  padding: 6px 10px;
+  font-size: 14px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  background-color: #fff;
+  cursor: pointer;
+  color: black;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  transition: all 0.2s ease-in-out;
+}
+
+.filters-container select:hover {
+  border-color: #888;
+}
+
+.filters-container select:focus {
+  outline: none;
+  border-color: #0044cc;
+  box-shadow: 0 0 0 2px rgba(0, 68, 204, 0.2);
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+  .filters-container {
+    flex-direction: column;
+    gap: 1rem;
+  }
+}
+

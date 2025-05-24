@@ -1,0 +1,44 @@
+services:
+
+  db:
+    image: postgres:16
+    container_name: my_postgres
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: postgres_exam_db
+      POSTGRES_DB: exams_db
+    volumes:
+      - pgdata:/var/lib/postgresql/data
+    ports:
+      - "5433:5432"
+
+
+  backend:
+    build:
+      context: ./exam_planner_backend
+      dockerfile: Dockerfile
+    container_name: flask_app
+    ports:
+      - "8000:8000"
+    depends_on:
+      - db
+    env_file:
+      - ./exam_planner_backend/.env
+
+
+  frontend:
+    build:
+      context: ./exam_planner_frontend
+      dockerfile: Dockerfile
+    container_name: react_app
+    ports:
+      - "3000:80"
+    env_file:
+      - ./exam_planner_frontend/.env
+    depends_on:
+      - backend
+
+
+
+volumes:
+  pgdata:

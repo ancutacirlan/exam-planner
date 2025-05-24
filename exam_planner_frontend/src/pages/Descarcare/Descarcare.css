@@ -1,0 +1,166 @@
+/* Resetare și stiluri globale */
+body {
+  margin: 0;
+  font-family: "Segoe UI", Roboto, sans-serif;
+  background-color: #f5f6fa;
+  color: #333;
+}
+
+/* Container principal pentru descărcare */
+.settings-container {
+  padding: 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+  background-color: #f9f9f9;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  box-sizing: border-box;
+}
+
+/* Titlu secțiune */
+.section-title {
+  font-size: 2rem;
+  color: #003366;
+  margin-bottom: 20px;
+  font-weight: 600;
+}
+
+/* Container pentru butoane */
+.form-btn-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+}
+
+@media (min-width: 768px) {
+  .form-btn-container {
+    flex-direction: row;
+    justify-content: center;
+  }
+}
+
+/* Butoane */
+.submit-btn {
+  padding: 20px 40px;
+  background-color: #0057b8;
+  color: white;
+  font-size: 18px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  width: 100%;
+  max-width: 400px;
+  box-shadow: 0 4px 8px rgba(0, 68, 204, 0.3);
+}
+
+.submit-btn:hover {
+  background-color: #00449e;
+  transform: translateY(-3px);
+}
+
+.submit-btn:active {
+  transform: translateY(1px);
+}
+
+/* Mesaj de eroare (dacă se folosește în pagină) */
+.error-message {
+  font-size: 1.2rem;
+  color: #ff0000;
+  background-color: #ffe6e6;
+  padding: 15px;
+  border-radius: 8px;
+  border: 1px solid #ff0000;
+  width: 100%;
+  max-width: 600px;
+  margin: 20px auto 0;
+}
+
+/* Stilizare buton logout (dacă este necesar) */
+.logout-button {
+  padding: 20px 40px;
+  background-color: #e63946;
+  color: white;
+  font-size: 18px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  width: 100%;
+  max-width: 400px;
+  margin-top: 30px;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.logout-button:hover {
+  background-color: #c02d2d;
+  transform: translateY(-3px);
+}
+
+.logout-button:active {
+  transform: translateY(1px);
+}
+
+/* Container pentru secțiuni de Descărcare și Încărcare */
+.section-container {
+  border: 2px solid #ddd;
+  border-radius: 8px;
+  padding: 20px;
+  margin-bottom: 20px;
+  background-color: #f9f9f9;
+}
+
+/* Stilizare input încărcare fișiere */
+.upload-section {
+  margin-top: 20px;
+  text-align: center;
+}
+
+.upload-input {
+  margin-top: 10px;
+  padding: 10px;
+  background-color: #f1f1f1;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 16px;
+  width: 100%;
+  max-width: 400px;
+}
+
+/* Mesaj de permisiuni pentru încărcare */
+.no-permission-message {
+  color: #ff0000;
+  font-size: 16px;
+  margin-top: 10px;
+  text-align: center;
+}
+
+/* Secțiune de încărcare fișiere utilizatori */
+.upload-section input[type="file"] {
+  width: 100%;
+  max-width: 400px;
+  padding: 10px;
+  background-color: #f9f9f9;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+/* Stilizare secțiune de eroare pentru încărcare */
+.error-message-upload {
+  color: #ff0000;
+  font-size: 1rem;
+  margin-top: 15px;
+  text-align: center;
+}
+.section-description {
+  margin-bottom: 10px;
+  color: #555;
+  font-style: italic;
+}

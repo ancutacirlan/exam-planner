@@ -1,0 +1,115 @@
+/* Setări globale */
+body {
+  margin: 0;
+  font-family: "Segoe UI", Roboto, sans-serif;
+  background-color: #f5f6fa;
+  color: #333;
+}
+
+/* Containerul principal */
+.home-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  padding: 20px;
+  background-color: #f5f6fa;
+  text-align: center;
+  overflow-y: auto;
+  box-sizing: border-box;
+}
+
+/* Stilizarea titlului */
+.home-container h1 {
+  font-size: 32px;
+  color: #003366;
+  margin-bottom: 20px;
+  font-weight: 600;
+}
+
+/* Containerul pentru butoane */
+.tab-menu {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  max-width: 420px;
+  margin-bottom: 20px;
+}
+
+/* Stilizarea butoanelor */
+.tab-button {
+  padding: 20px 40px;
+  background-color: #0057b8;
+  color: white;
+  font-size: 18px;
+  border: none;
+  border-radius: 6px;
+  margin-bottom: 20px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  width: 100%;
+  max-width: 400px;
+}
+
+.tab-button:hover {
+  background-color: #00449e;
+  transform: translateY(-3px);
+}
+
+.tab-button:active {
+  transform: translateY(1px);
+}
+
+/* Stilizarea butonului de logout */
+.logout-button {
+  padding: 20px 40px;
+  background-color: #e63946; 
+  color: white;
+  font-size: 18px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  width: 100%;
+  max-width: 400px;
+  margin-top: 30px;  
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.logout-button:hover {
+  background-color: #c02d2d; 
+  transform: translateY(-3px);
+}
+
+.logout-button:active {
+  transform: translateY(1px);
+}
+
+/* Paginile active */
+.tab-content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  padding: 20px;
+  text-align: center;
+}
+
+/* Mesaj de eroare */
+.error-message {
+  font-size: 1.2rem;
+  color: #ff0000;
+  background-color: #ffe6e6;
+  padding: 15px;
+  border-radius: 8px;
+  border: 1px solid #ff0000;
+  width: 100%;
+  max-width: 600px;
+  margin-top: 20px;
+}

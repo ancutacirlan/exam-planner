@@ -1,0 +1,92 @@
+.filter-container {
+  margin: 1rem 0;
+  display: flex;
+  gap: 0.5rem;
+  align-items: center;
+}
+
+.exam-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 1rem;
+  font-size: 14px;
+}
+
+.exam-table th, .exam-table td {
+  padding: 0.75rem;
+  border: 1px solid #ddd;
+  text-align: left;
+}
+
+.exam-table th {
+  background-color: #f3f4f6;
+  font-weight: 600;
+}
+
+.exam-table tr:nth-child(even) {
+  background-color: #fafafa;
+}
+
+.exam-table td:first-child {
+  font-weight: bold;
+  color: #0044cc;
+  text-transform: capitalize;
+}
+.back-button {
+  background-color: #0044cc;
+  color: white;
+  border: none;
+  padding: 8px 14px;
+  font-size: 0.9rem;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.back-button:hover {
+  background-color: #0033a0;
+}
+
+select {
+  padding: 8px 12px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  font-size: 0.9rem;
+  background-color: #fff;
+}
+
+.custom-dropdown {
+  padding: 8px 14px;
+  font-size: 0.95rem;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  background-color: white;
+  color: #333;
+  appearance: none; /* Ascunde săgeata default (pe majoritatea browserelor) */
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 10 6' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M1 1L5 5L9 1' stroke='%23444' stroke-width='1.5'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 12px center;
+  background-size: 12px;
+  cursor: pointer;
+  transition: border 0.2s ease, box-shadow 0.2s ease;
+}
+
+.custom-dropdown:hover {
+  border-color: #888;
+}
+
+.custom-dropdown:focus {
+  outline: none;
+  border-color: #0044cc;
+  box-shadow: 0 0 0 2px rgba(0, 68, 204, 0.2);
+}
+@media (max-width: 768px) {
+  .custom-dropdown {
+    font-size: 0.85rem;
+    padding: 6px 10px;
+  }
+}
+
+.examene-row.disabled {
+  opacity: 0.6;
+  pointer-events: none;
+}

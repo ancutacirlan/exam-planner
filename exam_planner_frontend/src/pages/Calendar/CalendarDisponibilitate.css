@@ -1,0 +1,127 @@
+/* Calendar container styling */
+.calendar-wrapper {
+  margin-top: 0px;
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  max-width: 420px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Calendar title */
+.calendar-title {
+  font-size: 1.5rem;
+  text-align: center;
+  margin-bottom: 1rem;
+  color: #0044cc;
+  font-weight: 600;
+}
+
+/* GENERAL CALENDAR TILE STYLE */
+.react-calendar__tile {
+  border-radius: 8px;
+  padding: 10px 0;
+  font-weight: bold;
+  color: #000000; /* text negru */
+  background-color: #f0f0f0;
+  transition: background-color 0.2s ease, transform 0.2s ease;
+}
+
+/* Zile în afara perioadei – nu hover, nu pointer */
+.react-calendar__tile:disabled {
+  background-color: #e0e0e0;
+  color: #a0a0a0;
+  cursor: default;
+  pointer-events: none;
+}
+
+/* Hover DOAR pentru zilele active */
+.react-calendar__tile:not(:disabled):hover {
+  background-color: #d6eaff;
+  cursor: pointer;
+  transform: scale(1.03);
+}
+
+/* Zi selectată */
+.react-calendar__tile--active {
+  background-color: #0044cc !important;
+  color: #fff !important;
+}
+
+/* Badge status (dacă se va folosi mai târziu) */
+.status-badge {
+  margin-top: 0px;
+  padding: 2px 6px;
+  border-radius: 6px;
+  font-size: 0.75rem;
+  text-align: center;
+  font-weight: bold;
+  color: white;
+}
+
+.status-badge.pending {
+  background-color: #ff9800;
+}
+
+.status-badge.accepted {
+  background-color: #4caf50;
+}
+
+.status-badge.rejected {
+  background-color: #f44336;
+}
+.react-calendar__navigation {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+
+.react-calendar__navigation button {
+  background-color: transparent;
+  border: none;
+  color: black;
+  font-size: 1.2rem;
+  padding: 5px 10px;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+  border-radius: 6px;
+  margin-bottom: 0;
+}
+
+/* Hover pe săgeți */
+.react-calendar__navigation button:hover {
+  background-color: #e6f0ff;
+}
+
+/* Luna afișată – centru și font mai mare */
+.react-calendar__navigation__label {
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: #000;
+  flex-grow: 1;
+  text-align: center;
+}
+
+.rejected-day {
+  background: #ffcccc !important;
+  color: #a70000 !important;
+  border-radius: 50%;
+  font-weight: bold;
+}
+
+.pending-day {
+  background: #fff7cc !important;
+  color: #9c8500 !important;
+  border-radius: 50%;
+  font-weight: bold;
+}
+
+.accepted-day {
+  background: #ccffcc !important;
+  color: #207a20 !important;
+  border-radius: 50%;
+  font-weight: bold;
+}

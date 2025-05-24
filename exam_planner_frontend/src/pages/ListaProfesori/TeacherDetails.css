@@ -1,0 +1,92 @@
+.teacher-details-container {
+    max-width: 500px;
+    margin: auto;
+    padding: 2rem;
+    background: #f9f9f9;
+    border-radius: 12px;
+    box-shadow: 0 0 12px rgba(0, 0, 0, 0.1);
+  }
+  
+  label {
+    display: block;
+    margin-top: 1rem;
+    font-weight: bold;
+  }
+  
+  .input-field {
+    width: 100%;
+    padding: 0.5rem;
+    margin-top: 0.25rem;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-size: 1rem;
+  }
+  
+  .input-field.modified {
+    border-color: #007bff;
+    background-color: #eef6ff;
+  }
+  
+  /* Căsuță de text care nu poate fi editată */
+  .input-field[readonly] {
+    background-color: #f0f0f0;  /* Culoare de fundal gri pentru câmpul read-only */
+    border-color: #ddd;  /* Border mai deschis pentru câmpul read-only */
+    color: #555;  /* Text mai puțin contrastant pentru câmpul read-only */
+    cursor: not-allowed;  /* Cursorul nu poate fi schimbat */
+  }
+  
+  .input-field[readonly]:focus {
+    outline: none;  /* Nu se vede outline când câmpul read-only este selectat */
+  }
+  
+  /* Stiluri pentru butoane */
+  .button-container {
+    margin-top: 1.5rem;
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  .back-button,
+  .save-button {
+    padding: 0.6rem 1.2rem;
+    font-size: 1rem;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+  }
+  
+  .back-button {
+    background-color: #ccc;
+  }
+  
+  .save-button {
+    background-color: #28a745;
+    color: white;
+  }
+  
+  .save-button:hover {
+    background-color: #218838;
+  }
+  
+  .back-button:hover {
+    background-color: #b3b3b3;
+  }
+  .status-message {
+    padding: 0.75rem;
+    margin-top: 1rem;
+    border-radius: 6px;
+    font-weight: bold;
+    text-align: center;
+  }
+  
+  .status-message.success {
+    background-color: #d4edda;
+    color: #155724;
+    border: 1px solid #c3e6cb;
+  }
+  
+  .status-message.error {
+    background-color: #f8d7da;
+    color: #721c24;
+    border: 1px solid #f5c6cb;
+  }

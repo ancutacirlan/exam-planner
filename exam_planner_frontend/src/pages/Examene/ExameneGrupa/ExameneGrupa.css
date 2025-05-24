@@ -1,0 +1,245 @@
+.examene-grupa-wrapper {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  padding: 1rem 2rem;
+  background-color: #f4f6f9;
+  box-sizing: border-box;
+}
+
+.examene-header {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 1rem;
+  padding-bottom: 0.5rem;
+  position: sticky;
+  top: 0;
+  background-color: #f4f6f9;
+  z-index: 10;
+  height: 60px;
+  flex-shrink: 0;
+}
+
+.examene-header h2 {
+  font-size: 20px;
+  margin: 0;
+  color: #0044cc;
+}
+
+.exam-count {
+  font-size: 18px;
+  background-color: #e6f0ff;
+  padding: 8px 15px;
+  border-radius: 20px;
+  color: #333;
+}
+
+.main-content {
+  display: flex;
+  gap: 2rem;
+  flex: 1;
+  overflow: hidden;
+}
+
+.examene-table-container {
+  flex: 1 1 60%;
+  overflow-y: auto;
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  padding: 1rem;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+}
+
+.examene-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.examene-table th,
+.examene-table td {
+  padding: 12px 16px;
+  border-bottom: 1px solid #ddd;
+}
+
+.examene-table th {
+  background-color: #0044cc;
+  color: white;
+  position: sticky;
+  top: 0;
+  z-index: 5;
+}
+
+.examene-table tr:hover {
+  background-color: #f1f1f1;
+  cursor: pointer;
+}
+
+.exam-details-row td {
+  background-color: #f9f9f9;
+  font-style: italic;
+  color: #555;
+}
+
+.reprogram-form-container {
+  margin-top: 1rem;
+  border: 1px solid #0044cc;
+  padding: 1rem 1.5rem;
+  border-radius: 8px;
+  background-color: #e6f0ff;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.reprogram-form-container label {
+  font-weight: 600;
+  color: #0044cc;
+  display: block;
+  margin-bottom: 0.3rem;
+}
+.exam-status {
+  font-weight: bold;
+  padding: 4px 8px;
+  border-radius: 6px;
+  display: inline-block;
+  text-align: center;
+}
+
+/* Culori pentru fiecare status */
+.status-acceptat {
+  background-color: #d4edda;
+  color: #155724;
+  border: 1px solid #c3e6cb;
+}
+
+.status-in-asteptare {
+  background-color: yellow;
+  color: #856404;
+  border: 1px solid #ffeeba;
+}
+
+.status-respins {
+  background-color: #f8d7da;
+  color: #721c24;
+  border: 1px solid #f5c6cb;
+}
+
+.reprogram-form-container input[type='date'] {
+  padding: 8px 10px;
+  font-size: 14px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  outline: none;
+  background-color: #ddd;
+  transition: border-color 0.2s ease-in-out;
+  width: 100%;
+  box-sizing: border-box;
+  margin-bottom: 1rem;
+}
+
+.reprogram-form-container input[type='date']:focus {
+  border-color: #0044cc;
+  box-shadow: 0 0 0 2px rgba(0, 68, 204, 0.2);
+}
+
+.buttons-row {
+  display: flex;
+  gap: 1rem;
+}
+
+.submit-button {
+  background-color: #0044cc;
+  border: none;
+  color: white;
+  padding: 8px 16px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: background-color 0.2s ease-in-out;
+}
+
+.submit-button:hover {
+  background-color: #003399;
+}
+
+.cancel-button {
+  background-color: #d9534f;
+  border: none;
+  color: white;
+  padding: 8px 16px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: background-color 0.2s ease-in-out;
+}
+
+.cancel-button:hover {
+  background-color: #c9302c;
+}
+
+.update-message {
+  margin-top: 0.5rem;
+  font-style: italic;
+  color: #0044cc;
+}
+
+.calendar-wrapper {
+  flex: 1 1 35%;
+  background-color: #fff;
+  padding: 1rem;
+  border-radius: 8px;
+  box-sizing: border-box;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  overflow-y: auto;
+}
+
+.calendar-today {
+  background: #e6f0ff !important;
+  font-weight: 700;
+}
+
+.calendar-acceptat {
+  background: #d4edda !important;
+  color: #155724 !important;
+}
+
+.calendar-in-asteptare {
+  background: #fff3cd !important;
+  color: #856404 !important;
+}
+
+.calendar-respins {
+  background: #f8d7da !important;
+  color: #721c24 !important;
+}
+
+.reprogram-button {
+  margin-left: 8px;
+  padding: 5px 10px;
+  cursor: pointer;
+  border: none;
+  background-color: #0044cc;
+  color: white;
+  border-radius: 6px;
+  font-size: 12px;
+  transition: background-color 0.2s ease-in-out;
+}
+
+.reprogram-button:hover {
+  background-color: #003399;
+}
+
+@media (max-width: 768px) {
+  .main-content {
+    flex-direction: column;
+  }
+
+  .calendar-wrapper {
+    margin-top: 1rem;
+    flex: none;
+    height: auto;
+  }
+}

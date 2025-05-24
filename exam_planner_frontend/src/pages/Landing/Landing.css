@@ -1,0 +1,56 @@
+body {
+    margin: 0;
+    font-family: "Segoe UI", Roboto, sans-serif;
+    background-color: #f5f6fa;
+  }
+  
+  .landing-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f5f6fa;
+  }
+  
+  .login-card {
+    background-color: #ffffff;
+    padding: 40px;
+    border-radius: 12px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.05);
+    text-align: center;
+    width: 100%;
+    max-width: 420px;
+  }
+  
+  .usv-logo {
+    width: 80px;
+    margin-bottom: 20px;
+  }
+  
+  .login-card h1 {
+    font-size: 28px;
+    color: #003366;
+    margin-bottom: 10px;
+  }
+  
+  .login-card p {
+    font-size: 16px;
+    color: #555;
+    margin-bottom: 30px;
+  }
+  
+  .login-button {
+    padding: 14px 26px;
+    background-color: #0057b8;
+    color: #fff;
+    font-size: 16px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+  }
+  
+  .login-button:hover {
+    background-color: #00449e;
+  }
+  

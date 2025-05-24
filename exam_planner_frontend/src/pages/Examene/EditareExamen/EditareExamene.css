@@ -1,0 +1,231 @@
+/* ==== Container Principal ==== */
+.editare-examen-container {
+    background-color: #fff;
+    padding: 2rem;
+    max-width: 700px;
+    margin: auto;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  }
+  
+  .editare-examen-container h2 {
+    margin-bottom: 1.5rem;
+    font-size: 1.75rem;
+    color: #333;
+  }
+  
+  /* ==== Formular Grid ==== */
+  .form-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1.5rem;
+  }
+  
+  .full-width {
+    grid-column: 1 / -1;
+  }
+  
+  /* ==== Input Groupuri ==== */
+  .input-group {
+    display: flex;
+    flex-direction: column;
+    min-width: 200px;
+  }
+  
+  .input-group label {
+    font-weight: 600;
+    margin-bottom: 0.4rem;
+    color: #444;
+  }
+  
+  
+  /* ==== Inputuri și Textarea ==== */
+  input,
+  select,
+  textarea {
+    padding: 0.5rem;
+    font-size: 1rem;
+    border-radius: 6px;
+    border: 1px solid #ccc;
+    color: black
+  }
+  
+  textarea {
+    resize: vertical;
+    min-height: 100px;
+    width: 100%;
+  }
+  
+  /* Highlight pentru câmpuri modificate */
+  .input-field.modified {
+    border-color: #007bff;
+    background-color: #f0f8ff;
+  }
+  
+  /* ==== Mesaj de succes ==== */
+  .success-message {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 1.2rem;
+    background-color: #e8f5e9;
+    border-left: 6px solid #43a047;
+    border-radius: 8px;
+    margin-bottom: 1.5rem;
+    color: #2e7d32;
+    font-weight: 500;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+  }
+  .success-message p {
+    margin: 0;
+    flex: 1;
+  }
+  
+  .success-message button {
+    background: none;
+    border: none;
+    color: #2e7d32;
+    font-size: 1rem;
+    cursor: pointer;
+    margin-left: 1rem;
+    font-weight: bold;
+  }
+  
+  .success-message button:hover {
+    text-decoration: underline;
+  }
+  /* ==== Butoane ==== */
+  .button-container-centered {
+    display: flex;
+    justify-content: center;
+    gap: 1.5rem;
+    margin-top: 2.5rem;
+    flex-wrap: wrap;
+  }
+  .back-button.small {
+    padding: 0.3rem 0.7rem;
+    width: 50px;
+    font-size: 0.8rem;
+    border-radius: 6px;
+    border: none;
+    cursor: pointer;
+    background-color: #e0e0e0;
+    color: #444;
+  }
+  .back-button.small:hover {
+    background-color: #ccc;
+  }
+  
+  .button-container-centered .small {
+    padding: 0.4rem 0.9rem;
+    font-size: 0.85rem;
+    border-radius: 6px;
+    border: none;
+    cursor: pointer;
+  }
+  
+  .save-button {
+    padding: 0.6rem 1.5rem;
+    font-size: 1rem;
+    font-weight: 600;
+    border-radius: 8px;
+    width: 400px;
+    border: none;
+    cursor: pointer;
+    background-color: #007bff;
+    color: white;
+    box-shadow: 0 2px 4px rgba(0, 123, 255, 0.2);
+    transition: background-color 0.2s ease;
+  }
+  
+  .save-button:hover {
+    background-color: #0056b3;
+  }
+  
+  .back-button {
+    background-color: #e0e0e0;
+    color: #333;
+  }
+  
+  .back-button:hover {
+    background-color: #ccc;
+  }
+  
+  /* ==== Loader ==== */
+  .loading-container {
+    text-align: center;
+    margin-top: 4rem;
+    font-size: 1.2rem;
+    color: #555;
+  }
+  
+  .loading-spinner {
+    margin: 0 auto 1rem;
+    border: 4px solid #f3f3f3;
+    border-top: 4px solid #4CAF50;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    animation: spin 1s linear infinite;
+  }
+  
+  @keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+  }
+  
+  /* ==== Alte clase (dacă adaugi asistenți etc.) ==== */
+  .assistant-item {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 0.5rem;
+  }
+  
+  .add-button,
+  .remove-button {
+    background-color: #007bff;
+    border: none;
+    color: white;
+    padding: 0.4rem 0.9rem;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 0.85rem;
+  }
+  
+  .add-button:hover,
+  .remove-button:hover {
+    background-color: #0056b3;
+  }
+  
+  /* ==== Stilizare input cu icon (pentru ora de început) ==== */
+.input-group.time-input {
+    position: relative;
+  }
+  
+  .input-group.time-input input[type="time"] {
+    padding-right: 2.5rem; /* spațiu pentru iconiță */
+  }
+  
+  .time-icon {
+    position: absolute;
+    right: 0.75rem;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 1.2rem;
+    color: #555;
+    pointer-events: none;
+    opacity: 0.8;
+  }
+
+  textarea {
+    resize: vertical;
+    min-height: 100px;
+    width: 100%;
+    background-color: #fff; /* asigură alb complet */
+  }
+  
+  select.modified {
+    border-color: #007bff;
+    background-color: #f0f8ff;
+  }
