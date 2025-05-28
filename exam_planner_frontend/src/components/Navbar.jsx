@@ -74,12 +74,6 @@ const Navbar = ({ onLogout, userRole }) => {
             Acasă
           </button>
 
-            {/* <button className="tab-button" onClick={() => navigate("/courses")}>Vizualizare cursuri</button> */}
-            {/* <button className="tab-button" onClick={() => navigate("/exam/all")}>Examene</button> */}
-            {/* <button className="tab-button" onClick={() => navigate("/users/professors")}>Profesori</button> */}
-            {/* <button className="tab-button" onClick={() => navigate("/descarcare")}>Gestionare fișiere</button> */}
-            <button className="tab-button" onClick={() => navigate("/settings")}>Setări</button>
-
           {userRole === "SEC" && (
             <>
               <button className={`tab-button ${isActive("/courses") ? "active" : ""}`} onClick={() => {
@@ -109,7 +103,7 @@ const Navbar = ({ onLogout, userRole }) => {
               }}>
                 Gestionare fișiere
               </button>
-              
+
               <button className={`tab-button ${isActive("/settings") ? "active" : ""}`} onClick={() => {
                 navigate("/settings");
                 setIsMobileMenuOpen(false);
@@ -175,19 +169,13 @@ const Navbar = ({ onLogout, userRole }) => {
                 navigate("/courses");
                 setIsMobileMenuOpen(false);
               }}>
-                Cursuri
+                Vizualizare cursuri
               </button>
               <button className={`tab-button ${isActive("/exam/by-status") ? "active" : ""}`} onClick={() => {
                 navigate("/exam/by-status");
                 setIsMobileMenuOpen(false);
               }}>
                 Examene în așteptare
-              </button>
-              <button className={`tab-button ${isActive("/users/professors") ? "active" : ""}`} onClick={() => {
-                navigate("/users/professors");
-                setIsMobileMenuOpen(false);
-              }}>
-                Profesori
               </button>
             </>
           )}
