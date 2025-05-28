@@ -74,20 +74,42 @@ const Navbar = ({ onLogout, userRole }) => {
             Acasă
           </button>
 
+            {/* <button className="tab-button" onClick={() => navigate("/courses")}>Vizualizare cursuri</button> */}
+            {/* <button className="tab-button" onClick={() => navigate("/exam/all")}>Examene</button> */}
+            {/* <button className="tab-button" onClick={() => navigate("/users/professors")}>Profesori</button> */}
+            {/* <button className="tab-button" onClick={() => navigate("/descarcare")}>Gestionare fișiere</button> */}
+            <button className="tab-button" onClick={() => navigate("/settings")}>Setări</button>
+
           {userRole === "SEC" && (
             <>
+              <button className={`tab-button ${isActive("/courses") ? "active" : ""}`} onClick={() => {
+                  navigate("/courses");
+                  setIsMobileMenuOpen(false);
+                }}>
+                  Vizualizare cursuri
+              </button>
+
               <button className={`tab-button ${isActive("/exam/all") ? "active" : ""}`} onClick={() => {
-                navigate("/exam/all");
+                  navigate("/exam/all");
+                  setIsMobileMenuOpen(false);
+                }}>
+                  Examene
+              </button>
+
+              <button className={`tab-button ${isActive("/users/professors") ? "active" : ""}`} onClick={() => {
+                navigate("/users/professors");
                 setIsMobileMenuOpen(false);
               }}>
                 Profesori
               </button>
+
               <button className={`tab-button ${isActive("/descarcare") ? "active" : ""}`} onClick={() => {
                 navigate("/descarcare");
                 setIsMobileMenuOpen(false);
               }}>
                 Gestionare fișiere
               </button>
+              
               <button className={`tab-button ${isActive("/settings") ? "active" : ""}`} onClick={() => {
                 navigate("/settings");
                 setIsMobileMenuOpen(false);
@@ -111,12 +133,13 @@ const Navbar = ({ onLogout, userRole }) => {
               }}>
                 Profesori
               </button>
-              <button className={`tab-button ${isActive("/descarcare") ? "active" : ""}`} onClick={() => {
-                navigate("/descarcare");
+              <button className={`tab-button ${isActive("/settings") ? "active" : ""}`} onClick={() => {
+                navigate("/settings");
                 setIsMobileMenuOpen(false);
               }}>
-                Gestionare fișiere
+                Setări
               </button>
+
             </>
           )}
 

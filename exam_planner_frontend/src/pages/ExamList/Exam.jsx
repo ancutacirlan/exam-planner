@@ -36,33 +36,40 @@ const Exam = () => {
     MISSING: "Neprogramate"
   };
 
-  const getFilteredExams = () => {
-    if (!examsData) return [];
+   const getFilteredExams = () => {
+  if (!examsData) return [];
 
-    if (filter === "MISSING") {
-      return examsData.missing_exams.flatMap(item =>
-        item.missing_exams.map(ex => ({
-          course_name: ex.course_name,
-          professor: ex.coordinator,
-          group_name: item.group,
-          status: "NEPROGRAMAT",
-          exam_date: "-",
-          start_time: "-",
-          duration: "-",
-          room: "-",
-          building: "-",
-          assistant: "-",
-          details: "",
-        }))
-      );
-    }
+  const allExams = Object.entries(examsData.exams_by_status).flatMap(([status, exams]) =>
+    exams.map(exam => ({ ...exam, status }))
+  );
 
-    const all = Object.entries(examsData.exams_by_status).flatMap(([status, exams]) =>
-      exams.map(exam => ({ ...exam, status }))
-    );
+  const missingExams = examsData.missing_exams.flatMap(item =>
+    item.missing_exams.map(ex => ({
+      course_name: ex.course_name,
+      professor: ex.coordinator,
+      group_name: item.group,
+      status: "NEPROGRAMAT",
+      exam_date: "-",
+      start_time: "-",
+      duration: "-",
+      room: "-",
+      building: "-",
+      assistant: "-",
+      details: "",
+    }))
+  );
 
-    return filter === "ALL" ? all : all.filter(ex => ex.status === filter);
-  };
+  if (filter === "ALL") {
+    return [...allExams, ...missingExams];
+  }
+
+  if (filter === "MISSING") {
+    return missingExams;
+  }
+
+  return allExams.filter(ex => ex.status === filter);
+};
+
 
   const translateStatus = (status) => {
     const normalized = status?.trim().toUpperCase().replace(/\s+/g, "_");

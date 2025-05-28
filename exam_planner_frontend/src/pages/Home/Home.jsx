@@ -108,7 +108,6 @@ const Home = () => {
             <button className="tab-button" onClick={() => navigate("/courses")}>Vizualizare cursuri</button>
             <button className="tab-button" onClick={() => navigate("/exam/all")}>Examene</button>
             <button className="tab-button" onClick={() => navigate("/users/professors")}>Profesori</button>
-            {/* <button className="tab-button" onClick={() => navigate("/exam/for/group")}>Examene</button> */}
             <button className="tab-button" onClick={() => navigate("/descarcare")}>Gestionare fișiere</button>
             <button className="tab-button" onClick={() => navigate("/settings")}>Setări</button>
             
@@ -118,7 +117,6 @@ const Home = () => {
         return (
           <>
             <button className="tab-button" onClick={() => navigate("/exam/propose")}>Propune Examen</button>
-            {/* <button className="tab-button" onClick={() => navigate("/exams/reschedule")}>Reprogramare examene respinse</button> */}
             <button className="tab-button" onClick={() => navigate("/exam/group")}>Vizualizare examene grupa</button>
             <button className="tab-button" onClick={() => navigate("/courses")}>Vizualizare cursuri</button>
           </>
@@ -127,9 +125,7 @@ const Home = () => {
         return (
           <>
             <button className="tab-button" onClick={() => navigate("/courses")}>Vizualizare cursuri</button>
-            <button className="tab-button" onClick={() => navigate("/exam/by-status")}>Status examene </button>
-            {/* <button className="tab-button" onClick={() => navigate("/exam/review")}>Revizuire examene</button> */}
-            <button className="tab-button" onClick={() => navigate("/users/professors")}>Profesori</button>
+            <button className="tab-button" onClick={() => navigate("/exam/by-status")}>Examene în așteptare</button>
           </>
         );
       default:

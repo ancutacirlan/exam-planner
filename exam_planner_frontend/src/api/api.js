@@ -14,7 +14,7 @@ const fetchWithAuth = async (endpoint, { method, body, token, headers = {} } = {
   if (!token) {
     throw new Error("Token de autentificare lipsă");
   }
-  // ✅ Adaugă tokenul DOAR dacă există
+  
   if (token) {
     finalHeaders["Authorization"] = `Bearer ${token}`;
   }
@@ -22,7 +22,7 @@ const fetchWithAuth = async (endpoint, { method, body, token, headers = {} } = {
   const res = await fetch(`${BASE_URL}${endpoint}`, {
     method,
     headers: finalHeaders,
-    credentials: "include", // Poate fi eliminat dacă nu folosești cookie-uri
+    credentials: "include", 
     body: body ? JSON.stringify(body) : undefined,
   });
 
@@ -61,9 +61,6 @@ export const setExaminationMethod = (courseId, method, token) =>
 export const fetchExams = (token) =>
   fetchWithAuth('/exam/all',{method:"GET", token})
 
-//TO DO: exam/all - DONE
-//TO DO: exam/by-status
-//TO DO: exam/edit/{id} - impelmentat ( TO VERIFY )
 export const editExam = (examId, examData, token) =>
   fetchWithAuth(`/exam/edit/${examId}`, { method: "PUT", body: examData, token });
 
@@ -107,7 +104,6 @@ export const updateExaminationPeriod = (id, data, token) =>
 export const deleteExaminationPeriod = (id, token) =>
   fetchWithAuth(`/settings/examination-periods/${id}`, { method: "DELETE", token });
 
-//TO DO: settings/reset
 export const handleDatabaseReset = (token) =>
   fetchWithAuth('/settings/reset', {method:"POST", token})
 
@@ -134,10 +130,10 @@ export const fetchRooms = async (token) => {
   try {
     const rooms = await fetchWithAuth("/rooms", { method: "GET", token });
     console.log(rooms);
-    return rooms; // ✅ Returnează datele preluate
+    return rooms; 
   } catch (error) {
     console.error("Eroare la obținerea camerelor:", error);
-    throw error; // 🔁 Opțional: aruncă eroarea mai departe pentru a o prinde în componentă
+    throw error; 
   }
 };
 
@@ -203,7 +199,7 @@ export const downloadExcel = async (token) => {
 
 export const downloadUserTemplate = async (token) => {
   const endpoint = "/download/user-template";
-  console.log("TRIMIT TOKENUL:", token); // <-- Adaugă asta
+  console.log("TRIMIT TOKENUL:", token); 
 
 
   const res = await fetch(`${BASE_URL}${endpoint}`, {
@@ -232,7 +228,6 @@ export const uploadUsers = async (formData, token) => {
     method: "POST",
     headers: {
       Authorization: `Bearer ${token}`,
-      // Nu setăm Content-Type — browserul îl setează automat pentru FormData
     },
     body: formData,
   });
