@@ -17,7 +17,16 @@ h2 {
   color: #0044cc;
   margin-bottom: 2rem;
 }
+.exam-item.inactive {
+  background-color: #efefef;
+  cursor: default;
+  opacity: 0.85;
+}
 
+.exam-item.inactive:hover {
+  transform: none;
+  background-color: #efefef;
+}
 /* Containerul de decizie */
 .decision-container {
   background-color: #f4f6f9;

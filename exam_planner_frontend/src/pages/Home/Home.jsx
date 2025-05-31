@@ -126,6 +126,7 @@ const Home = () => {
           <>
             <button className="tab-button" onClick={() => navigate("/courses")}>Vizualizare cursuri</button>
             <button className="tab-button" onClick={() => navigate("/exam/by-status")}>Examene în așteptare</button>
+            <button className="tab-button" onClick={() => navigate("/exam/all")}>Examene</button>
           </>
         );
       default:
