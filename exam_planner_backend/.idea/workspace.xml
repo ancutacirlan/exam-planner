@@ -4,7 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="c4e6c42f-264f-49dc-a66e-448eebf22a9c" name="Changes" comment="" />
+    <list default="true" id="c4e6c42f-264f-49dc-a66e-448eebf22a9c" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/../exam_planner_frontend/src/pages/ExamList/Exam.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/../exam_planner_frontend/src/pages/ExamList/Exam.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../exam_planner_frontend/src/pages/Examene/ExameneInAsteptare/ExameneInAsteptare.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/../exam_planner_frontend/src/pages/Examene/ExameneInAsteptare/ExameneInAsteptare.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../exam_planner_frontend/src/pages/Home/Home.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/../exam_planner_frontend/src/pages/Home/Home.jsx" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -43,14 +47,17 @@
     &quot;assignee&quot;: &quot;ancutacirlan&quot;
   }
 }</component>
-  <component name="GithubPullRequestsUISettings"><![CDATA[{
-  "selectedUrlAndAccountId": {
-    "url": "https://github.com/ancutacirlan/exam-planner.git",
-    "accountId": "01fa4835-3630-4d32-a759-0c4509b1d2f6"
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;https://github.com/ancutacirlan/exam-planner.git&quot;,
+    &quot;accountId&quot;: &quot;01fa4835-3630-4d32-a759-0c4509b1d2f6&quot;
   }
-}]]></component>
+}</component>
   <component name="HighlightingSettingsPerFile">
     <setting file="file://$PROJECT_DIR$/app/email.py" root0="FORCE_HIGHLIGHTING" />
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
   </component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 7
@@ -70,10 +77,12 @@
     &quot;Python.clasask.executor&quot;: &quot;Debug&quot;,
     &quot;Python.laborator3.executor&quot;: &quot;Run&quot;,
     &quot;Python.main.executor&quot;: &quot;Run&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
     &quot;git-widget-placeholder&quot;: &quot;main&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/cirla/Desktop/an I/sem 2/TWAAOS/exam_planner_backend&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/cirla/Desktop/an I/sem 2/TWAAOS/exam_planner/exam_planner_backend&quot;,
     &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
     &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
     &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
@@ -207,8 +216,6 @@
         <item itemvalue="Docker.docker-compose.yml.db: Compose Deployment" />
         <item itemvalue="Docker.docker-compose.yml: Compose Deployment" />
         <item itemvalue="Docker.Dockerfile" />
-        <item itemvalue="Python.main" />
-        <item itemvalue="Python.clasask" />
       </list>
     </recent_temporary>
   </component>
@@ -247,16 +254,16 @@
       <workItem from="1748074963488" duration="501000" />
       <workItem from="1748078357755" duration="4870000" />
       <workItem from="1748091128736" duration="139000" />
+      <workItem from="1748092877687" duration="5259000" />
+      <workItem from="1748265668952" duration="30000" />
+      <workItem from="1749734494780" duration="110000" />
+      <workItem from="1749734688903" duration="689000" />
+      <workItem from="1749828659385" duration="830000" />
+      <workItem from="1750062079521" duration="662000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
-  </component>
-  <component name="com.intellij.coverage.CoverageDataManagerImpl">
-    <SUITE FILE_PATH="coverage/exam_panner$clasask.coverage" NAME="clasask Coverage Results" MODIFIED="1744454137413" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/../an I/sem 2/TIA/Lab3/clasask" />
-    <SUITE FILE_PATH="coverage/exam_panner$laborator3.coverage" NAME="laborator3 Coverage Results" MODIFIED="1743866764588" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/../Master I/Master I/sem2/IA" />
-    <SUITE FILE_PATH="coverage/exam_panner$main.coverage" NAME="main Coverage Results" MODIFIED="1747815365714" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/../an I/sem 2/TIA/tema_proiect/PythonProject1" />
-    <SUITE FILE_PATH="coverage/exam_panner$exam_panner.coverage" NAME="exam_panner Coverage Results" MODIFIED="1747814956327" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
   </component>
 </project>

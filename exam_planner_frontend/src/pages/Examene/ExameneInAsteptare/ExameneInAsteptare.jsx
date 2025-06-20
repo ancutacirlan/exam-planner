@@ -209,7 +209,7 @@ const ExameneInAsteptare = () => {
                         <option value="">Selectează sală</option>
                         {rooms.map((room) => (
                           <option key={room.room_id} value={room.room_id}>
-                            {room.room_name}
+                            {room.name}
                           </option>
                         ))}
                       </select>
@@ -277,7 +277,7 @@ const ExameneInAsteptare = () => {
             <h3>Toate examenele propuse</h3>
             {allExams.map((exam) => (
               <div key={exam.exam_id} className="exam-item inactive">
-                <strong>{exam.course_name}</strong> — {exam.exam_date} — <em>Status: {exam.status}</em>
+                <strong>{exam.course_name}</strong> — {exam.exam_date} — {exam.room} — {exam.start_time?.slice(0, 5)} — <em>Status: {exam.status}</em>
               </div>
             ))}
           </div>

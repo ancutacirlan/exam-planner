@@ -1,8 +1,8 @@
 import { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { fetchExams } from "../../api/api";
-import '../Examene/ExameneGrupa/ExameneGrupa.css'; // Refolosim stilul existent
-import './Exam.css'
+import '../Examene/ExameneGrupa/ExameneGrupa.css';
+import './Exam.css';
 
 const Exam = () => {
   const [examsData, setExamsData] = useState(null);
@@ -15,6 +15,12 @@ const Exam = () => {
 
   useEffect(() => {
     const loadExams = async () => {
+      if (!token) {
+        setError("Token de autentificare lipsă.");
+        setLoading(false);
+        return;
+      }
+
       try {
         const data = await fetchExams(token);
         setExamsData(data);
@@ -25,6 +31,7 @@ const Exam = () => {
         setLoading(false);
       }
     };
+
     loadExams();
   }, [token]);
 
@@ -36,7 +43,40 @@ const Exam = () => {
     MISSING: "Neprogramate"
   };
 
-   
+  const getFilteredExams = () => {
+    if (!examsData) return [];
+
+    const allExams = Object.entries(examsData.exams_by_status).flatMap(
+      ([status, exams]) =>
+        exams.map((exam) => ({ ...exam, status }))
+    );
+
+    const missingExams = (examsData.missing_exams || []).flatMap(item =>
+      item.missing_exams.map(ex => ({
+        course_name: ex.course_name,
+        professor: ex.coordinator,
+        group_name: item.group,
+        status: "NEPROGRAMAT",
+        exam_date: "-",
+        start_time: "-",
+        duration: "-",
+        room: "-",
+        building: "-",
+        assistant: "-",
+        details: "",
+      }))
+    );
+
+    if (filter === "ALL") {
+      return [...allExams, ...missingExams];
+    }
+
+    if (filter === "MISSING") {
+      return missingExams;
+    }
+
+    return allExams.filter(ex => ex.status === filter);
+  };
 
   const translateStatus = (status) => {
     const normalized = status?.trim().toUpperCase().replace(/\s+/g, "_");
@@ -56,18 +96,22 @@ const Exam = () => {
 
   if (loading) return <p>Se încarcă...</p>;
 
-  const filteredExams = getFilteredExams();
+  const filteredExams = getFilteredExams(); // <-- esențial!
 
   return (
     <div className="examene-grupa-wrapper">
       <div className="examene-header">
         <h2>Lista examenelor</h2>
         <div style={{ display: "flex", gap: "0.5rem", alignItems: "center" }}>
-        <select value={filter} onChange={(e) => setFilter(e.target.value)} className="custom-dropdown">
-          {Object.entries(filterOptions).map(([key, label]) => (
-            <option key={key} value={key}>{label}</option>
-          ))}
-        </select>
+          <select
+            value={filter}
+            onChange={(e) => setFilter(e.target.value)}
+            className="custom-dropdown"
+          >
+            {Object.entries(filterOptions).map(([key, label]) => (
+              <option key={key} value={key}>{label}</option>
+            ))}
+          </select>
           <button className="back-button" onClick={() => navigate("/home")}>
             Înapoi
           </button>
@@ -94,35 +138,31 @@ const Exam = () => {
                 <th>Status</th>
               </tr>
             </thead>
-
             <tbody>
               {filteredExams.map((exam, index) => {
                 const { text, className } = translateStatus(exam.status);
-                
+
+                const normalizedExam = {
+                  ...exam,
+                  professor: (exam.professor && typeof exam.professor === 'object') ? exam.professor.name : (exam.professor || "-"),
+                  assistant: (exam.assistant && typeof exam.assistant === 'object') ? exam.assistant.name : (exam.assistant || "-"),
+                  room: (exam.room && typeof exam.room === 'object') ? exam.room.name : (exam.room || "-"),
+                  building: (exam.building && typeof exam.building === 'object') ? exam.building.name : (exam.building || "-"),
+                };
+
                 return (
                   <tr
                     key={index}
                     className="examene-row"
                     onClick={() => {
-                      const normalizedExam = {
-                        ...exam,
-                        professor: (exam.professor && typeof exam.professor === 'object') ? exam.professor.name : (exam.professor || "-"),
-                        assistant: (exam.assistant && typeof exam.assistant === 'object') ? exam.assistant.name : (exam.assistant || "-"),
-                        room: (exam.room && typeof exam.room === 'object') ? exam.room.name : (exam.room || "-"),
-                        building: (exam.building && typeof exam.building === 'object') ? exam.building.name : (exam.building || "-"),
-                      };
-                    
-                      console.log("Trimitem la editare:", normalizedExam);
-                    
                       if (exam.exam_id) {
                         navigate(`/exam/edit/${exam.exam_id}`, { state: { exam: normalizedExam } });
                       } else {
                         console.warn("Exam fără ID:", exam);
                       }
                     }}
-                    style={{ cursor: exam.id ? 'pointer' : 'default' }}
+                    style={{ cursor: exam.exam_id ? 'pointer' : 'default' }}
                   >
-
                     <td>{exam.course_name}</td>
                     <td>{exam.professor}</td>
                     <td>{exam.group_name}</td>
@@ -136,7 +176,6 @@ const Exam = () => {
                 );
               })}
             </tbody>
-
           </table>
         </div>
       )}
